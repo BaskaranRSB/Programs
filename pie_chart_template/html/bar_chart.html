@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="http://www.jqplot.com/deploy/dist/jquery.min.js"></script>
+<script type="text/javascript" src="http://www.jqplot.com/deploy/dist/jquery.jqplot.min.js"></script>
+<script type="text/javascript" src="http://www.jqplot.com/deploy/dist/jquery.jqplot.min.js"></script>
+<script type="text/javascript" src="http://www.jqplot.com/deploy/dist/plugins/jqplot.barRenderer.min.js"></script>
+<script type="text/javascript" src="http://www.jqplot.com/deploy/dist/plugins/jqplot.pieRenderer.min.js"></script>
+<script type="text/javascript" src="http://www.jqplot.com/deploy/dist/plugins/jqplot.categoryAxisRenderer.min.js"></script>
+<script type="text/javascript" src="http://www.jqplot.com/deploy/dist/plugins/jqplot.pointLabels.min.js"></script>
+<link rel="stylesheet" type="text/css" hrf="http://www.jqplot.com/deploy/dist/jquery.jqplot.min.css" />
+<script>
+$(document).ready(function(){
+        var s1 = [2, 6, 7, 10];
+        var s2 = [7, 5, 3, 2];
+        var ticks = ['a', 'b', 'c', 'd'];
+         
+        plot2 = $.jqplot('chart2', [s1, s2], {
+            seriesDefaults: {
+                renderer:$.jqplot.BarRenderer,
+                pointLabels: { show: true }
+            },
+            axes: {
+                xaxis: {
+                    renderer: $.jqplot.CategoryAxisRenderer,
+                    ticks: ticks
+                }
+            }
+        });
+});
+</script>
+</head>
+<body>
+
+	<div id="chart2" ></div>
+
+</body>
+</html>
+
+
