@@ -1,0 +1,25 @@
+
+Git command for add a ssh key
+
+1.mkdir .ssh
+2.cd .ssh/
+3.ssh-keygen -t rsa -C "baskaran@fifthgentech.local"
+4.ssh-agent -s
+5.eval $(ssh-agent -s)
+6.ssh-add id_rsa
+7.xclip -sel clip < ~/.ssh/id_rsa.pub
+
+
+Git Branch fetch command
+1.git remote add origin git@5ggit.fifthgentech.local:root/Thinksoft.git
+2.git fetch origin
+3.git checkout master
+
+
+1.git log //all commited details
+
+2.git reset --hard commit_id  //git pull in specified commit_id
+
+3. git push --force commit_id  //git push in specified commit_id and remaining commits deleted
+
+
